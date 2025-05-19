@@ -1,31 +1,66 @@
-# Commission Fee Calculator
+# 💰 Commission Fee Calculator
 
-This PHP application calculates commission fees for deposit and withdrawal transactions using real exchange rates and rules based on user type. The supported currencies are **EUR**, **USD**, and **JPY**.
+This PHP command-line application calculates commission fees for deposit and withdrawal transactions using real-time exchange rates and rules based on user and transaction types.
 
-## Features
+## 🌍 Supported Currencies
 
-- Handles two user types: `private` and `business`
-- Supports transaction types: `deposit` and `withdraw`
-- Currency conversion using [exchangeratesapi.io](https://exchangeratesapi.io/)
-- Rules for free withdrawal for private users (up to €1000/week and 3 free withdrawals)
-- Different rounding precision for currencies (EUR, USD: 2 decimals, JPY: 0)
-- Fully modular and extendable
+- EUR
+- USD
+- JPY
+
+## 👤 Supported User Types
+
+- `private`
+- `business`
+
+## 💳 Supported Transaction Types
+
+- `deposit`
+- `withdraw`
 
 ---
 
-## Requirements
+## 🧠 Features
+
+- Free withdrawals up to €1000/week and 3 transactions for private users.
+- Fixed percentage fees for business users and deposits.
+- Real-time exchange rates via [exchangeratesapi.io](https://exchangeratesapi.io/).
+- Currency-specific rounding:
+  - EUR & USD: 2 decimal places
+  - JPY: No decimals (rounded to integers)
+- Clean, testable, object-oriented code.
+
+---
+
+## 📦 Requirements
 
 - PHP 8.0 or higher
 - Composer
 
 ---
 
-## Installation
+## 🛠️ Installation
 
 1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/davitosadze/commission-fee-calculator.git
    cd commission-fee-calculator
+
    ```
-# commission-fee-calculator
+
+2. **Install dependencies:**
+   ```bash
+   composer install
+
+   ```
+
+---
+
+## Usage
+
+1. **Run Code:**
+
+   ```bash
+   php script.php input.csv
+   ```
